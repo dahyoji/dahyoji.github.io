@@ -1,0 +1,290 @@
+#header h1 {
+    position: fixed;
+    top: 8rem;
+    left: 8rem;
+    z-index: 999;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+#header .cover_btn {
+    position: fixed;
+    top: 8rem;
+    right: 8rem;
+    z-index: 999;
+
+    width: 4rem;
+    height: 4rem;
+    background: var(--point-color);
+}
+
+#header .gnb {
+    position: fixed;
+    top: 50%;
+    right: 8rem;
+    z-index: 997;
+}
+
+#header .gnb>ul>li~li {
+    margin-top: 4px;
+}
+
+#header .gnb>ul>li>a {
+    position: relative;
+    display: block;
+    line-height: 1.6rem;
+
+    font-size: 0;
+    width: 4rem;
+
+}
+
+#header .gnb>ul>li>a::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: calc(100% - 2rem);
+    height: 1px;
+    background: #333;
+
+    transition: width 0.4s;
+}
+
+#header .gnb>ul>li.on>a::before {
+    width: 100%;
+}
+
+
+#header .cover_btn::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 0 0;
+    background: url(../lib/icon/feather/menu.svg) no-repeat center center/24px;
+    filter: invert();
+}
+
+
+#header .cover_btn.on::before {
+    background: url(../lib/icon/feather/x-square.svg) no-repeat center center/24px;
+}
+
+#header .cover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    inset: 0 0 0 0;
+    background: var(--secondary-color);
+    z-index: 998;
+
+    display: none;
+
+}
+
+#header .cover.on {
+    display: flex;
+}
+
+#header .cover ul>li>a {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    width: calc(100% + 4rem);
+    color: var(--white-color);
+    text-transform: uppercase;
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1.5;
+}
+
+#header .cover ul>li>a::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--white-color);
+}
+
+.intro {}
+
+.intro .inner {
+    position: relative;
+}
+
+.intro h2 {
+    margin-bottom: 4rem;
+    font-size: 8rem;
+    font-weight: 800;
+}
+
+.intro span {
+    display: block;
+    margin-top: 4rem;
+    width: 100%;
+    height: 1px;
+    background: #ddd;
+
+}
+
+.intro em {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    width: 8rem;
+    height: 8rem;
+    background: var(--secondary-color);
+
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.portfolio {
+    overflow: hidden;
+    background: #f5f5f5;
+}
+
+.portfolio .flx {
+    gap: 8rem;
+}
+
+.portfolio .desc {
+    transform: translate(0, 4rem);
+    opacity: 0;
+
+
+
+}
+
+.portfolio.on .desc {
+    transform: translate(0, 0);
+    opacity: 1;
+
+    transition: 0.4s;
+}
+
+.portfolio .mokup {
+    transform: translate(0, 4rem);
+    opacity: 0;
+
+
+}
+
+.portfolio.on .mokup {
+    transform: translate(0, 0);
+    opacity: 1;
+
+    transition: 0.4s 0.4s;
+}
+
+.portfolio .desc h2 {
+    margin-bottom: 1.6rem;
+    font-size: 4rem;
+    font-weight: 100;
+
+}
+
+.portfolio .desc strong {
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    color: var(--secondary-color);
+}
+
+.portfolio .desc>p {
+    margin-bottom: 4rem;
+}
+
+.portfolio .desc ul>li {
+    display: grid;
+    grid-template-columns: 8rem 1fr;
+    line-height: 4rem;
+    border-bottom: 1px solid var(--line-color);
+}
+
+.portfolio .desc ul>li em {
+    font-weight: 700;
+}
+
+.portfolio .desc ul>li p {
+    line-height: 4rem;
+}
+
+.portfolio .desc ul>li .color {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+.portfolio .desc ul>li .color span {
+    font-size: 0;
+    width: 16px;
+    height: 16px;
+
+    background: #333;
+    border-radius: 50%;
+}
+
+.portfolio .desc .lnk {
+    display: flex;
+    gap: 8px;
+    margin-top: 4rem;
+}
+
+.portfolio .mokup .case {
+    height: 40rem;
+    background: var(--secondary-color);
+    border-radius: 2.4rem;
+    overflow: hidden;
+    border: 1px solid var(--line-color);
+    cursor: pointer;
+}
+
+.portfolio .mokup .case img {
+
+    transition: 2s;
+}
+
+.portfolio .mokup .case:hover img {
+    transform: translate(0, calc(-100% + 40rem));
+
+}
+
+.portfolio02 .flx .mokup {
+    order: -1;
+}
+
+.portfolio04 .flx .mokup {
+    order: -1;
+}
+
+
+#footer address {
+    position: fixed;
+    bottom: 8rem;
+    left: 8rem;
+    z-index: 999;
+}
+
+#footer .to_top {
+    position: fixed;
+    bottom: 8rem;
+    right: 8rem;
+    z-index: 997;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    width: 4rem;
+    height: 4rem;
+    background: var(--point-color);
+
+    display: none;
+}
+
+#footer .to_top.on {
+    display: flex;
+}

@@ -1,0 +1,138 @@
+:root {
+    --primary-color: #FFFBDE;
+    --secondary-color: #91C8E4;
+    --point-color: #749BC2;
+
+    --line-color: #ddd;
+    --body-color: #444;
+    --white-color: #fff;
+
+
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    color: var(--body-color);
+    font-size: 1.6rem;
+}
+
+.inner {
+    max-width: 141rem;
+    margin: 0 auto;
+}
+
+.flx {
+    display: flex;
+
+}
+
+.flx>* {
+    flex: 1;
+}
+
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 2.4rem;
+    height: 4rem;
+    border: 2px solid var(--color);
+    background: var(--color);
+}
+
+.btn.btn_web {
+    color: var(--white-color);
+}
+
+.btn.btn_photo {
+    color: var(--color);
+    background: transparent;
+}
+
+
+.default {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 56px;
+    padding: 150px 24px;
+}
+
+.default .title {
+    margin: 0 0 48px 0;
+}
+
+.default .title h2 {
+    font-size: 56px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: "Unbounded";
+    margin: 0 0 16px 0;
+    color: #333;
+}
+
+.default .title span {
+    font-size: 24px;
+    font-weight: 100;
+    line-height: 28px;
+}
+
+.default ul li {
+    position: relative;
+    margin: 0 0 40px 0;
+}
+
+.default ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.default ul li a .desc {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    align-items: center;
+    gap: 32px;
+}
+
+.default ul li a .desc .num {
+    font-size: 40px;
+    font-weight: 900;
+    font-family: "Unbounded";
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    background: #f2f2f2;
+    color: #666;
+    border-radius: 50%;
+}
+
+.default ul li a .txt strong {
+    display: block;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+}
+
+.default ul li a .txt b {
+    font-weight: 700;
+    color: #ff6969;
+}
+
+.default ul li a span {
+    color: #999;
+}
+
+.default ul li::before {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    width: 100%;
+    background: #f2f2f2;
+}
