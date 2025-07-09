@@ -15,8 +15,14 @@
 
     width: 4rem;
     height: 4rem;
-    background: var(--point-color);
+    background: var(--secondary-color);
 }
+
+#header .cover_btn.on {
+    background: var(--primary-color);
+}
+
+
 
 #header .gnb {
     position: fixed;
@@ -66,7 +72,8 @@
 
 
 #header .cover_btn.on::before {
-    background: url(../lib/icon/feather/x-square.svg) no-repeat center center/24px;
+    background: url(../lib/icon/feather/x.svg) no-repeat center center/24px;
+    filter: none;
 }
 
 #header .cover {
@@ -106,37 +113,123 @@
     background: var(--white-color);
 }
 
-.intro {}
+.intro {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1410px;
+    margin: 0 auto;
+    height: 100vh;
+    background: var(--primary-color);
+    border-left: 1px solid #333;
+    border-right: 1px solid #333;
+
+}
+
+.intro .headline {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 24px 0;
+    border-top: 3px solid #333;
+    border-bottom: 3px solid #333;
+    width: 100%;
+}
+
+.intro .headline h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 64px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    white-space: nowrap;
+
+    font-family: "Noto Serif KR", serif;
+    line-height: 1.5;
+}
+
 
 .intro .inner {
-    position: relative;
+    display: flex;
+    gap: 40px;
+    margin: 0 16px;
+
 }
 
-.intro h2 {
-    margin-bottom: 4rem;
-    font-size: 8rem;
-    font-weight: 800;
+.intro .inner .intro_text {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
 }
 
-.intro span {
+
+
+.intro .inner .intro_text strong {
     display: block;
-    margin-top: 4rem;
-    width: 100%;
-    height: 1px;
-    background: #ddd;
+
+    text-align: center;
+    font-size: 72px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    letter-spacing: 8px;
+    font-family: "Noto Serif KR", serif;
 
 }
 
-.intro em {
+.intro .left {
+    flex: 1;
+    margin-top: 80px;
+}
+
+.intro .left .txt {
+    padding: 40px 16px;
+    border-top: 1px solid #333;
+
+}
+
+.intro .left .txt p {
+    font-size: 24px;
+    line-height: 1.6;
+
+}
+
+.intro .left .lf_tt {
     position: absolute;
     bottom: 0;
-    right: 0;
+    padding: 40px 16px;
 
-    width: 8rem;
-    height: 8rem;
-    background: var(--secondary-color);
+}
 
-    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+.intro .left .lf_tt p {}
+
+.intro .right {
+    flex: 1;
+    margin-top: 80px;
+}
+
+.intro .right .cs_box {
+
+    margin-bottom: 24px;
+    padding: 40px 16px;
+    background: #333;
+}
+
+.intro .right .cs_box p {
+    color: var(--white-color);
+}
+
+
+.intro .right .intro_image img {
+    display: block;
+    width: 100%;
+
+    border: 1px solid #333;
+
 }
 
 .portfolio {
