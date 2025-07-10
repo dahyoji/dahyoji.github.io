@@ -118,7 +118,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 1410px;
+    max-width: 141rem;
     margin: 0 auto;
     height: 100vh;
     background: var(--primary-color);
@@ -142,11 +142,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 64px;
+    font-size: 6.4rem;
     font-weight: 700;
     letter-spacing: 2px;
     white-space: nowrap;
-
+    color: var(--secondary-color);
     font-family: "Noto Serif KR", serif;
     line-height: 1.5;
 }
@@ -173,29 +173,34 @@
     display: block;
 
     text-align: center;
-    font-size: 72px;
+    font-size: 7.2rem;
     text-transform: uppercase;
     white-space: nowrap;
     letter-spacing: 8px;
+    color: var(--secondary-color);
     font-family: "Noto Serif KR", serif;
 
 }
 
 .intro .left {
     flex: 1;
-    margin-top: 80px;
 }
 
 .intro .left .txt {
+    position: absolute;
+    top: 40%;
+    left: 16px;
+    transform: translate(0, -30%);
+    width: 50%;
     padding: 40px 16px;
     border-top: 1px solid #333;
 
 }
 
 .intro .left .txt p {
-    font-size: 24px;
+    font-size: 2rem;
     line-height: 1.6;
-
+    color: var(--secondary-color);
 }
 
 .intro .left .lf_tt {
@@ -209,12 +214,12 @@
 
 .intro .right {
     flex: 1;
-    margin-top: 80px;
+
 }
 
 .intro .right .cs_box {
 
-    margin-bottom: 24px;
+    margin-bottom: 2.4rem;
     padding: 40px 16px;
     background: #333;
 }
@@ -223,22 +228,34 @@
     color: var(--white-color);
 }
 
-
-.intro .right .intro_image img {
+.intro .right strong {
     display: block;
-    width: 100%;
-
-    border: 1px solid #333;
-
+    text-align: center;
+    font-size: 5.6rem;
+    white-space: nowrap;
+    letter-spacing: 1rem;
+    font-family: "Noto Serif KR", serif;
+    color: var(--secondary-color);
 }
+
 
 .portfolio {
+    position: relative;
+    max-width: 141rem;
+    margin: 0 auto;
     overflow: hidden;
-    background: #f5f5f5;
+    background: var(--primary-color);
+    border-left: 1px solid #333;
+    border-right: 1px solid #333;
+
 }
 
+
 .portfolio .flx {
-    gap: 8rem;
+    gap: 4rem;
+    margin: 0 16px;
+
+
 }
 
 .portfolio .desc {
@@ -273,9 +290,16 @@
 .portfolio .desc h2 {
     margin-bottom: 1.6rem;
     font-size: 4rem;
-    font-weight: 100;
+    font-weight: 600;
+    padding: 2.4rem 0;
+    color: var(--secondary-color);
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    font-family: "Noto Serif KR", serif;
 
 }
+
+
 
 .portfolio .desc strong {
     text-transform: uppercase;
@@ -288,49 +312,38 @@
     margin-bottom: 4rem;
 }
 
-.portfolio .desc ul>li {
-    display: grid;
-    grid-template-columns: 8rem 1fr;
-    line-height: 4rem;
-    border-bottom: 1px solid var(--line-color);
-}
-
-.portfolio .desc ul>li em {
-    font-weight: 700;
-}
-
-.portfolio .desc ul>li p {
-    line-height: 4rem;
-}
-
-.portfolio .desc ul>li .color {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-
-.portfolio .desc ul>li .color span {
-    font-size: 0;
-    width: 16px;
-    height: 16px;
-
+.portfolio .desc .desc_box {
+    position: absolute;
+    bottom: 0;
+    padding: 24px 16px;
     background: #333;
-    border-radius: 50%;
+
 }
 
-.portfolio .desc .lnk {
-    display: flex;
-    gap: 8px;
-    margin-top: 4rem;
+.portfolio .desc span {
+    display: block;
+    color: #fff;
+
 }
+
+.portfolio .mokup strong {
+    display: block;
+    margin-bottom: 1.6rem;
+    color: var(--secondary-color);
+    font-size: 6rem;
+    font-weight: 600;
+    padding: 2.4rem 0;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+
+}
+
 
 .portfolio .mokup .case {
     height: 40rem;
     background: var(--secondary-color);
-    border-radius: 2.4rem;
     overflow: hidden;
-    border: 1px solid var(--line-color);
+    border: 1px solid var(--secondary-color);
     cursor: pointer;
 }
 
@@ -344,6 +357,46 @@
 
 }
 
+
+.portfolio .mokup ul>li {
+    display: grid;
+    grid-template-columns: 8rem 1fr;
+    line-height: 4rem;
+    border-bottom: 1px solid var(--line-color);
+
+}
+
+.portfolio .mokup ul>li em {
+    font-weight: 700;
+}
+
+.portfolio .mokup ul>li p {
+    line-height: 4rem;
+}
+
+.portfolio .mokup ul>li .color {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+.portfolio .mokup ul>li .color span {
+    font-size: 0;
+    width: 16px;
+    height: 16px;
+
+    background: #333;
+    border-radius: 50%;
+}
+
+.portfolio .mokup .lnk {
+    display: flex;
+    gap: 8px;
+    margin-top: 4rem;
+}
+
+
 .portfolio02 .flx .mokup {
     order: -1;
 }
@@ -352,6 +405,59 @@
     order: -1;
 }
 
+.training {
+    max-width: 141rem;
+    margin: 0 auto;
+    border-left: 1px solid #333;
+    border-right: 1px solid #333;
+}
+
+.profile {
+
+    max-width: 141rem;
+    margin: 0 auto;
+    border-left: 1px solid #333;
+    border-right: 1px solid #333;
+    background: var(--primary-color);
+}
+
+.profile .title {
+    padding: 24px 0;
+    white-space: nowrap;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+
+}
+
+.profile .title h2 {
+    text-align: center;
+    font-size: 5.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--secondary-color);
+}
+
+.profile .inner {
+    display: flex;
+    gap: 40px;
+}
+
+.profile .inner>* {
+    flex: 1;
+}
+
+.profile .inner .itm strong {
+    display: block;
+    text-align: center;
+    font-size: 3.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--secondary-color);
+}
+
+.profile .inner .itm p {
+    text-align: center;
+}
 
 #footer address {
     position: fixed;
