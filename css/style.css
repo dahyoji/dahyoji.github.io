@@ -19,7 +19,7 @@
 }
 
 #header .cover_btn.on {
-    background: var(--primary-color);
+    background: var(--secondary-color);
 }
 
 
@@ -38,10 +38,10 @@
 #header .gnb>ul>li>a {
     position: relative;
     display: block;
-    line-height: 1.6rem;
+    line-height: 2.4rem;
 
     font-size: 0;
-    width: 4rem;
+    width: 7rem;
 
 }
 
@@ -73,7 +73,7 @@
 
 #header .cover_btn.on::before {
     background: url(../lib/icon/feather/x.svg) no-repeat center center/24px;
-    filter: none;
+    filter: invert();
 }
 
 #header .cover {
@@ -82,9 +82,9 @@
     align-items: center;
     position: fixed;
     inset: 0 0 0 0;
-    background: var(--secondary-color);
+    background: var(--primary-color);
     z-index: 998;
-
+    font-family: "Noto Serif KR", serif;
     display: none;
 
 }
@@ -99,7 +99,7 @@
     gap: 16px;
 
     width: calc(100% + 4rem);
-    color: var(--white-color);
+    color: var(--secondary-color);
     text-transform: uppercase;
     font-size: 4rem;
     font-weight: 800;
@@ -110,11 +110,10 @@
     content: "";
     flex: 1;
     height: 1px;
-    background: var(--white-color);
+    background: var(--secondary-color);
 }
 
 .intro {
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -128,10 +127,6 @@
 }
 
 .intro .headline {
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     padding: 24px 0;
     border-top: 3px solid #333;
     border-bottom: 3px solid #333;
@@ -152,27 +147,11 @@
 }
 
 
-.intro .inner {
-    display: flex;
-    gap: 40px;
-    margin: 0 16px;
 
-}
-
-.intro .inner .intro_text {
-    position: absolute;
-    top: 25%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-}
-
-
-
-.intro .inner .intro_text strong {
+.intro .intro_text strong {
     display: block;
-
     text-align: center;
+    padding: 24px 0;
     font-size: 7.2rem;
     text-transform: uppercase;
     white-space: nowrap;
@@ -182,31 +161,38 @@
 
 }
 
+.intro .inner {
+    display: flex;
+    gap: 40px;
+    margin: 0 16px;
+    margin-bottom: 120px;
+
+}
+
 .intro .left {
+
     flex: 1;
+
 }
 
 .intro .left .txt {
-    position: absolute;
-    top: 40%;
-    left: 16px;
-    transform: translate(0, -30%);
-    width: 50%;
-    padding: 40px 16px;
+    padding: 40px 0;
     border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
 
 }
 
 .intro .left .txt p {
+    text-align: center;
     font-size: 2rem;
     line-height: 1.6;
     color: var(--secondary-color);
+
 }
 
 .intro .left .lf_tt {
-    position: absolute;
-    bottom: 0;
-    padding: 40px 16px;
+    margin-top: 56px;
+
 
 }
 
@@ -218,7 +204,6 @@
 }
 
 .intro .right .cs_box {
-
     margin-bottom: 2.4rem;
     padding: 40px 16px;
     background: #333;
@@ -230,14 +215,22 @@
 
 .intro .right strong {
     display: block;
+    padding: 80px 0;
     text-align: center;
     font-size: 5.6rem;
     white-space: nowrap;
     letter-spacing: 1rem;
     font-family: "Noto Serif KR", serif;
     color: var(--secondary-color);
+    border: 1px solid #333;
 }
 
+.intro em {
+    display: block;
+    padding: 1.6rem 0;
+    text-align: center;
+    color: var(--point-color);
+}
 
 .portfolio {
     position: relative;
@@ -295,7 +288,6 @@
     color: var(--secondary-color);
     border-top: 1px solid #333;
     border-bottom: 1px solid #333;
-    font-family: "Noto Serif KR", serif;
 
 }
 
@@ -410,6 +402,52 @@
     margin: 0 auto;
     border-left: 1px solid #333;
     border-right: 1px solid #333;
+    background: var(--primary-color);
+}
+
+.training .title {
+    margin-bottom: 8rem;
+    text-align: center;
+}
+
+.training .title h2 {
+    padding: 16px 0;
+    font-size: 5.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+}
+
+.training .title p {
+    margin-top: 1.6rem;
+}
+
+.training .inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 16px;
+    gap: 4rem;
+}
+
+
+
+.training .inner .itm .tr_case {
+    height: 20rem;
+    background: var(--secondary-color);
+    overflow: hidden;
+    border: 1px solid var(--secondary-color);
+    cursor: pointer;
+}
+
+
+.training .inner .itm .txt {
+    margin-top: 16px;
+
+}
+
+.training .inner .itm .txt strong {
+    font-size: 2.4rem;
 }
 
 .profile {
@@ -430,6 +468,7 @@
 }
 
 .profile .title h2 {
+
     text-align: center;
     font-size: 5.6rem;
     font-weight: 700;
@@ -439,24 +478,50 @@
 
 .profile .inner {
     display: flex;
-    gap: 40px;
+    margin: 0 16px;
+    gap: 30px;
 }
 
 .profile .inner>* {
     flex: 1;
 }
 
-.profile .inner .itm strong {
+.profile .left {}
+
+.profile .left figure {
+    margin-top: 3.2rem;
+    width: 340px;
+    height: 340px;
+    border: 1px solid #333;
+}
+
+.profile .right strong {
     display: block;
-    text-align: center;
+    margin-top: 3.2rem;
     font-size: 3.2rem;
     font-weight: 600;
     text-transform: uppercase;
+    letter-spacing: 8px;
     color: var(--secondary-color);
 }
 
-.profile .inner .itm p {
-    text-align: center;
+
+.profile .right ul>li {
+    display: grid;
+    margin-top: 2.4rem;
+    grid-template-columns: 8rem 1fr;
+    line-height: 4rem;
+    border-bottom: 1px solid var(--line-color);
+    gap: 4rem;
+}
+
+.profile .right ul>li em {
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.profile .right ul>li p {
+    line-height: 4rem;
 }
 
 #footer address {
