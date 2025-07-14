@@ -20,8 +20,8 @@ $(function () {
         fixedElements: '#header, #footer',
 
         afterLoad: function (_, idx) {
-            $('#header .gnb>ul>li').removeClass('on');
-            $('#header .gnb>ul>li').eq(idx - 1).addClass('on');
+            $('#footer .gnb>ul>li').removeClass('on');
+            $('#footer .gnb>ul>li').eq(idx - 1).addClass('on');
 
             $('.section').removeClass('on');
             $('.section').eq(idx - 1).addClass('on');
@@ -39,16 +39,16 @@ $(function () {
         }
     });
 
-    $('#header .cover_btn').on('click', function () {
+    $('#footer .cover_btn').on('click', function () {
         $(this).toggleClass('on');
-        $('#header .cover').toggleClass('on');
+        $('#footer .cover').toggleClass('on');
     })
 
-    $('#header .cover ul>li>a').on('click', function () {
-        $('#header .cover_btn').removeClass('on');
-        $('#header .cover').removeClass('on');
+    $('#footer .cover ul>li>a').on('click', function () {
+        $('#footer .cover_btn').removeClass('on');
+        $('#footer .cover').removeClass('on');
     })
-    $('#header .cover').on('wheel', function (e) {
+    $('#footer .cover').on('wheel', function (e) {
         e.stopPropagation();
 
     });
