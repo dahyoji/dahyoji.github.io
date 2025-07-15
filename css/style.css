@@ -57,9 +57,6 @@
     height: 100vh;
     background: var(--primary-color);
 
-    border-left: 1px solid #333;
-    border-right: 1px solid #333;
-
 }
 
 .intro .headline {
@@ -88,7 +85,7 @@
 .intro .intro_text strong {
     display: block;
     text-align: center;
-    padding: 24px 0;
+    padding: 32px 0;
     font-size: 7.2rem;
 
     white-space: nowrap;
@@ -101,8 +98,8 @@
 .intro .inner {
     display: flex;
     gap: 40px;
-    margin: 0 16px;
-    margin-bottom: 120px;
+    margin: 0 32px;
+
 
 }
 
@@ -130,11 +127,12 @@
 
 .intro .left .lf_tt {
     margin-top: 56px;
+    font-size: 1.2rem;
+    line-height: 1.5;
 
 
 }
 
-.intro .left .lf_tt p {}
 
 .intro .right {
     flex: 1;
@@ -145,6 +143,8 @@
     margin-bottom: 2.4rem;
     padding: 40px 16px;
     background: #333;
+    font-size: 1.2rem;
+    line-height: 1.5;
 }
 
 .intro .right .cs_box p {
@@ -155,12 +155,17 @@
     display: block;
     padding: 80px 0;
     text-align: center;
-    font-size: 5.6rem;
+    font-size: 4rem;
     white-space: nowrap;
     letter-spacing: 1rem;
     font-family: "Noto Serif KR", serif;
     color: var(--secondary-color);
     border: 1px solid #333;
+}
+
+.intro span {
+    display: block;
+    text-align: center;
 }
 
 
@@ -170,15 +175,14 @@
     margin: 0 auto;
     overflow: hidden;
     background: var(--primary-color);
-    border-left: 1px solid #333;
-    border-right: 1px solid #333;
+
 
 }
 
 
 .portfolio .flx {
     gap: 4rem;
-    margin: 0 16px;
+    margin: 0 32px;
 
 
 }
@@ -214,7 +218,7 @@
 
 .portfolio .desc h2 {
     margin-bottom: 1.6rem;
-    font-size: 4rem;
+    font-size: 3.2rem;
     font-weight: 600;
     padding: 2.4rem 0;
     color: var(--secondary-color);
@@ -247,6 +251,8 @@
 .portfolio .desc span {
     display: block;
     color: #fff;
+    font-size: 1.2rem;
+    line-height: 1.5;
 
 }
 
@@ -254,17 +260,19 @@
     display: block;
     margin-bottom: 1.6rem;
     color: var(--secondary-color);
-    font-size: 6rem;
+    font-size: 2rem;
     font-weight: 600;
     padding: 2.4rem 0;
     text-transform: uppercase;
     letter-spacing: 8px;
 
+    border-bottom: 1px solid #333;
+
 }
 
 
 .portfolio .mokup .case {
-    height: 40rem;
+    height: 32rem;
     background: var(--secondary-color);
     overflow: hidden;
     border: 1px solid var(--secondary-color);
@@ -320,6 +328,100 @@
     margin-top: 4rem;
 }
 
+/* pofol01 만들어보기 */
+
+.portfolio01 h2 {
+    text-align: center;
+    margin-bottom: 8rem;
+    font-size: 3.2rem;
+    font-weight: 600;
+    padding: 2.4rem 0;
+    color: var(--secondary-color);
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+
+}
+
+
+
+.portfolio01 .desc strong {
+    display: block;
+    margin-bottom: 1.6rem;
+    color: var(--secondary-color);
+    font-size: 2.4rem;
+    font-weight: 600;
+    padding: 2.4rem 0;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+
+    border-bottom: 1px solid #333;
+}
+
+
+.portfolio01 .desc span {
+    display: block;
+    color: #fff;
+
+}
+
+.portfolio01 .desc ul>li {
+    display: grid;
+    grid-template-columns: 8rem 1fr;
+    line-height: 4rem;
+    border-bottom: 1px solid var(--line-color);
+
+}
+
+.portfolio01 .desc ul>li em {
+    font-weight: 600;
+}
+
+.portfolio01 .desc ul>li p {
+    line-height: 4rem;
+}
+
+.portfolio01 .desc ul>li .color {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+.portfolio01 .desc ul>li .color span {
+    font-size: 0;
+    width: 16px;
+    height: 16px;
+
+    background: #333;
+    border-radius: 50%;
+}
+
+
+.portfolio01 .mokup .case {
+    height: 32rem;
+    background: var(--secondary-color);
+    overflow: hidden;
+    border: 1px solid var(--secondary-color);
+    cursor: pointer;
+}
+
+.portfolio01 .mokup .case img {
+
+    transition: 2s;
+}
+
+.portfolio01 .mokup .case:hover img {
+    transform: translate(0, calc(-100% + 40rem));
+
+}
+
+
+
+.portfolio .mokup .lnk {
+    display: flex;
+    gap: 8px;
+    margin-top: 4rem;
+}
 
 .portfolio02 .flx .mokup {
     order: -1;
@@ -357,7 +459,7 @@
 
 .training .inner {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     margin: 0 16px;
     gap: 4rem;
 }
@@ -372,14 +474,27 @@
     cursor: pointer;
 }
 
+.training .inner .itm .tr_case img {
+    transition: 2s;
+}
+
+.training .inner .itm .tr_case:hover img {
+    transform: translate(0, calc(-100% + 20rem));
+
+}
 
 .training .inner .itm .txt {
-    margin-top: 16px;
+    margin-top: 1.6rem;
+    border-bottom: 1px solid var(--line-color);
 
 }
 
 .training .inner .itm .txt strong {
     font-size: 2.4rem;
+}
+
+.training .inner .itm .txt p {
+    margin-top: 0.8rem;
 }
 
 .profile {
