@@ -6,7 +6,7 @@ $(function () {
         .from({}, {})
         .from('.intro h2', { y: 100, opacity: 0 })
         .from('.intro p', { y: 100, opacity: 0 })
-        .from('.intro span', { width: 0, duration: 2 })
+        // .from('.intro span', { width: 0, duration: 2 })
         .from('.intro em', { opacity: 0 })
 
 
