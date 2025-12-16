@@ -7,7 +7,7 @@ $(function () {
         .from('.intro h2', { y: 100, opacity: 0 })
         .from('.intro p', { y: 100, opacity: 0 })
         // .from('.intro span', { width: 0, duration: 2 })
-        .from('.intro em', { opacity: 0 })
+        //.from('.intro em', { opacity: 0 })
 
 
     // gsap.to('.intro h2', { y: 100, duration: 2 })
