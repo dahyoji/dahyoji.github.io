@@ -842,43 +842,43 @@
         }
     }
 
-    .profile .left .itm {}
-
-    .profile .left .itm figure {
-        margin-top: 24px;
-        width: 240px;
-        height: 240px;
-        border: 1px solid #000;
-    }
-
-    .profile .left .itm strong {
-        display: block;
-        margin-top: 3.2rem;
-        font-size: 3.2rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 8px;
-        color: var(--secondary-color);
-    }
+    .profile .inner {
+    padding: 40px 20px 80px;
+  }
 
 
-    .profile .itm ul>li {
-        display: grid;
-        margin-top: 2.4rem;
-        grid-template-columns: 8rem 1fr;
-        line-height: 4rem;
-        border-bottom: 1px solid var(--line-color);
-        gap: 4rem;
-    }
+  .profile .inner .ft {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    margin-bottom: 80px;
+  }
 
-    .profile .itm ul>li em {
-        font-weight: 700;
-        white-space: nowrap;
-    }
+ 
+  .profile .inner .ft h3 {
+    font-size: 28px;
+    margin-bottom: 24px;
+  }
 
-    .profile .itm ul>li p {
-        line-height: 4rem;
-    }
+
+  .profile .inner .ft ul {
+    gap: 12px;
+  }
+
+  .profile .inner .ft ul li {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  /* 세로 구분선 제거 */
+  .profile .inner .ft > *:not(:first-child)::before {
+    display: none;
+  }
+
+
+  .profile .inner .fb p {
+    font-size: 12px;
+    line-height: 18px;
+  }
 
 }
 
@@ -1322,7 +1322,7 @@
     }
 
 
-    #footer address {
+  #footer .ft_tr{
 
         /*  */
         display: none;
