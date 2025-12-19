@@ -1327,5 +1327,7 @@
         /*  */
         display: none;
     }
-
+  #footer address{
+    display: none;
+  }
 }
